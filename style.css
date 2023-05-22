@@ -1,0 +1,373 @@
+@font-face{
+  font-family: 'remit-webicon';
+  src: url(https://cdn.jsdelivr.net/gh/remit-dev/web-icons@9dece1f6555647008596627fe921cfc6e124db34/fonts/remit-webicon.ttf);
+}
+pre{
+  margin: 1rem .5rem;
+  border-radius: .5rem;
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  -webkit-tap-highlight-color: transparent;
+}
+h1,h2,h3,h4,h5,h6{
+  font-size: 1.8rem;
+  font-family: 'aburobold','sans-serif';
+  margin: 0 0.7rem 0.7rem 0.7rem;
+  color: #006dff;
+}
+.step{
+  color: #00bbff;
+  font-size: 2.2rem;
+}
+p, nav, li{
+  font-family: 'oxaniumregular','sans-serif';
+  line-height: 1.3rem;
+  word-spacing: 0.1rem;
+}
+div.intro p{
+  margin: 0 0.7rem 0.7rem 0.7rem;
+}
+a{
+  text-decoration: none;
+  color: black;
+}
+/*  CSS style Variable  */
+.btn{
+  font-family: 'aburobold','sans-serif';
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: #006dff;
+  padding: 0.6rem 0.8rem;
+  border: none;
+  font-weight: bold;
+  border-radius: 0.6rem;
+}
+.btn:active{
+  color: black;
+  background-color: #88bbff;
+}
+.btn:hover{
+  background-color: #A5CAFD;
+  color: #000;
+}
+.pos-abs{
+  position: absolute;
+}
+.pos-fix{
+  position: fixed;
+}
+.dis-flex{
+  display: flex;
+}
+
+/*  CSS style Variable end  */
+
+
+
+
+/*  preload */
+div.preloader{
+  height: 100vh;
+  width: 100%;
+  z-index: 999;
+  background: #192636 url(https://cdn.jsdelivr.net/gh/remit-dev/preloader@b8546a3d0d1d2716ba2232433d438bfae96c1e53/web-load.gif) center center no-repeat;
+}
+/*  Preload End  */
+
+
+
+
+
+/*  Navigation  */
+div.nav-wrapper{
+  top: 3.75rem;
+  left: 0;
+}
+
+nav{
+  height: initial;
+  width: initial;
+  display: inline-block;
+  background-color: #fff;
+  border: 0.0625rem solid;
+  border-radius: 0.3rem 1rem 1rem 1rem;
+  padding: 1rem;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* Header Bar */
+header{
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.70);
+  width: 100%;
+  height: 2.7rem;
+}
+
+.menu>i, .logo>img{
+  align-items: center;
+}
+/* Header bar */
+
+/*  Menu btn */
+.menu-hide{
+  display: none;
+}
+.menu>i{
+  font-size: 2rem;
+}
+.menu{
+ margin-left: 0.5rem;
+}
+.menu>i:active{
+  color: #88bbff;
+}
+
+
+/*  Menu btn  end*/
+
+/*  Remit Logo  */
+.logo{
+  margin-right: 0.5rem;
+}
+img.remit-logo{
+  width: 2rem;
+}
+
+
+/* Remit Logo end */
+
+.r, .t, .sub, .parent{
+  cursor: pointer;
+}
+.align{
+  cursor: default;
+}
+
+.sub{
+  visibility: hidden;
+}
+
+div.list ul{
+  display: grid;
+  justify-content: start;
+}
+/*  Font Use  */
+i{
+  font-family:'remit-webicon';
+  margin-right: 3px;
+  font-style: normal;
+}
+/*  Font Align  */
+li.align{
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 3px;
+  position: relative;
+  width: initial;
+  margin-bottom: 3px;
+}
+li.align:last-child{
+  margin-bottom: 0;
+}
+
+.p-flex{
+  display: flex;
+  align-items: center;
+  padding-right: 1.2rem;
+  height: 1.2rem;
+  margin-right: .2rem;
+}
+/*  Arrow Key  right  */
+p.p-flex i:nth-child(2){
+  position: absolute;
+  right: 0;
+  font-size: 1.2rem;
+}
+li.align ul{
+  visibility: hidden;
+  height: 0;
+  padding: 0px 5px;
+}
+li.align>ul.active, li.parent>ul.active{
+  margin-top: 5px;
+  padding: 3px 5px;
+  visibility: visible;
+  height: initial;
+  transition: ease-in-out 500ms;
+  border-radius: 5px;
+  background-color: #f0efed;
+}
+li.parent>ul.active{
+  margin: 5px 0;
+}
+li.align ul.sub{
+  border: 1px solid black;
+}
+.sub li{
+}
+li.parent{
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+li.align ul>li{
+  display: flex;
+  height: 0;
+}
+li.align ul.active>li{
+  height: 100%;
+  transition: 200ms ease;
+}
+i.active{
+  transform: rotate(90deg);
+  transition: 300ms ease;
+}
+
+/*  Navigation End  */
+/*  Hero Section  */
+div.hero{
+  background-size: cover;
+  height: 300px;
+  background-position: center center;
+  background-image: radial-gradient(circle at top right, rgb(49, 157, 235) 0%, rgb(49, 157, 235) 13%,rgb(76, 166, 234) 13%, rgb(76, 166, 234) 23%,rgb(103, 176, 232) 23%, rgb(103, 176, 232) 33%,rgb(130, 185, 231) 33%, rgb(130, 185, 231) 46%,rgb(156, 194, 230) 46%, rgb(156, 194, 230) 48%,rgb(183, 203, 229) 48%, rgb(183, 203, 229) 63%,rgb(210, 213, 227) 63%, rgb(210, 213, 227) 83%,rgb(237, 222, 226) 83%, rgb(237, 222, 226) 100%);
+}
+div.latest, div.hero{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+p.version{
+  text-align: center;
+  margin: 1rem;
+}
+
+p.title{
+  text-align: center;
+  margin: 1rem;
+  padding: 2rem;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  background-color: rgba(255, 255, 255, 0.70);
+  padding: 0.2rem 0;
+  border-radius: 0.6rem;
+  width: 18rem;
+}
+/*  Hero Section End  */
+
+/*  How to Start  */
+div.start{
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+/*  How to start end  */
+/*  intro  */
+ul.intro-list{
+  margin: 0 .5rem 0 1.7rem;
+}
+ul.intro-list>li{
+  list-style-type: decimal;
+  margin-bottom: .5rem;
+}
+
+/*  intro end  */
+
+
+/*  Auto Dark Mode  */
+body{
+  background-color: #fcfcfc;
+}
+@media(prefers-color-scheme: dark){
+  body{
+    background-color: #192636;
+  }
+}
+
+
+/*  intro image  */
+
+
+/*  intro image end  */
+footer>div.about{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: .5rem;
+}
+footer>div.about>img{
+  width: 3rem;
+}
+footer>div.about>p{
+  text-align: justify;
+  padding: .5rem;
+}
+
+
+/*  Highlights Syntex  */
+button.copy{
+  width: 90%;
+  border: none;
+  background-color: darkgray;
+  padding: 0.5rem;
+  font-weight: bold;
+  margin: 0 5%;
+}
+button.copy:active{
+  background-color: limegreen;
+  color: black;
+}
+
+/* Static Page  */
+div.static{
+  height: 1rem;
+}
+
+div.sample-of-style{
+  background-color: #bfccdc;
+  margin: 1rem;
+  border-radius: .5rem;
+}
+div.sample-of-style>a{
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+div.sample-of-style>a>img{
+  width: 40%;
+  margin: .2rem auto;
+  padding: .62rem .45rem;
+}
+div.sample-of-style>a>p, div.sample-of-style>a>h2{
+  text-align: center;
+}
+/*  Static Page End  */
+
+/*  footer  */
+div.f-pages{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: .3rem;
+}
+div.f-pages>div{
+  display: flex;
+  flex-direction: column;
+}
+div.f-pages>div>a{
+  margin-left: .7rem;
+  margin-bottom: .5rem;
+  font-family: 'oxaniumregular','sans-serif';
+}
+
+
+/*  footer end  */
+
+
