@@ -252,11 +252,10 @@ p.version{
 p.title{
   text-align: center;
   margin: 1rem;
-  padding: 2rem;
+  padding: .5rem;
   font-size: 1.2rem;
   line-height: 2rem;
   background-color: rgba(255, 255, 255, 0.70);
-  padding: 0.2rem 0;
   border-radius: 0.6rem;
   width: 18rem;
 }
@@ -334,6 +333,7 @@ div.sample-of-style{
   background-color: #bfccdc;
   margin: 1rem;
   border-radius: .5rem;
+  padding: 0.5rem;
 }
 div.sample-of-style>a{
   display: flex;
